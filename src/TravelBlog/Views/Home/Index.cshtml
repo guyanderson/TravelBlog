@@ -17,7 +17,7 @@
 <ul>
     @foreach (var listItem in Model)
     {
-        <li>@Html.ActionLink(listItem.Name, "Details", "Location", new { id = listItem.TripId }) | | @Html.ActionLink("Edit", "Edit", new { id = listItem.TripId }) | @Html.ActionLink("Delete", "Delete", new { id = listItem.TripId })</li>
+        <li>@Html.ActionLink(listItem.Name, "Details", "Location", new { id = listItem.TripId }) | @Html.ActionLink("Edit", "Edit", new { id = listItem.TripId }) | @Html.ActionLink("Delete", "Delete", new { id = listItem.TripId })</li>
     }
 </ul>
 

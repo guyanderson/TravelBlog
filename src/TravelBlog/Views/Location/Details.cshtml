@@ -3,10 +3,12 @@
     ViewData["Title"] = "Location - Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<h3>Here are the locations associated with your trip.</h3>
 <ul>
     @foreach (var listItem in Model)
     {
-        <li>@Html.DisplayFor(modelItem => listItem.Name)</li>
+        //<li>@Html.DisplayFor(modelItem => listItem.Name)</li>
+
+        <li>@Html.ActionLink(listItem.Name, "Details", "Experience", new { id = listItem.LocationId })</li>
     }
 </ul>

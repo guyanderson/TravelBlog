@@ -11,11 +11,17 @@ namespace TravelBlog.Models
     public class Location
     {
 
+        public Location()
+        {
+            this.Experiences = new HashSet<Experience>();
+        }
+
         [Key]
         public int LocationId { get; set; }
         public string Name { get; set; }
         public int TripId { get; set; }
         public virtual Trip Trip { get; set; }
+        public virtual ICollection<Experience> Experiences { get; set; }
 
     }
 }
