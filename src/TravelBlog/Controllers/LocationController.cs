@@ -22,7 +22,7 @@ namespace TravelBlog.Controllers
         {
             //var thisLocation = db.Locations.FirstOrDefault(locations => locations.LocationId == id);
             //var thisLocation = (db.Locations.Select(locations => locations.LocationId == id).ToList());
-            List<Location> thisLocation = db.Locations.Where(x => x.LocationId == id).ToList();
+            List<Location> thisLocation = db.Locations.Where(x => x.TripId == id).ToList();
             return View(thisLocation);
         }
 
