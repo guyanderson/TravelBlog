@@ -1,0 +1,13 @@
+﻿@model TravelBlog.Models.Trip
+
+@{
+    ViewData["Title"] = "Location - Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Location Details</h2>
+<hr />
+
+<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
+<p>@Html.DisplayNameFor(model => model.TripId) : @Html.DisplayFor(model => model.TripId)</p>
+

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<TravelBlog.Models.Trip>
+
+@{
+
+    ViewData["Title"] = "World Adventurer's Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>World Adventurer's Travel Blog</h2>
+<hr />
+
+<h3>Welcome Adventurer, to the World Adventurer's Travel Blog!</h3>
+<p>Here are a few trips we have taken!</p>
+
+<h4>Trips</h4>
+<ul>
+    @foreach (var listItem in Model)
+    {
+        <li>@Html.DisplayFor(modelItem => listItem.Name) | @Html.ActionLink("Details", "Details", "Location", new { id = listItem.TripId }) | | @Html.ActionLink("Edit", "Edit", new { id = listItem.TripId }) | @Html.ActionLink("Delete", "Delete", new { id = listItem.TripId })</li>
+    }
+</ul>
+<p>@Html.ActionLink("Add new Trip", "Create")</p>
