@@ -7,11 +7,11 @@
 
 <h2>Experience Details</h2>
 <hr />
-@*<ul>
+<ul>
     @foreach (var listItem in Model)
     {
-        <li>@Html.DisplayFor(modelItem => listItem.Name)</li>
+        //<li>@Html.DisplayFor(modelItem => listItem.Name)</li>
 
-        //<li>@Html.ActionLink(listItem.Name, "Details", "Experience", new { id = listItem.LocationId })</li>
+        <li>@Html.ActionLink(listItem.Name, "Details", "Experience", new { id = listItem.LocationId })</li>
     }
-</ul>)*@
+</ul>
